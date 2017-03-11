@@ -1,0 +1,10 @@
+.w3-white w3-padding-xlarge w3-padding-32 w3-margin-top {
+	float: left;
+	width: 50%;
+}
+.w3-container. {
+    background-color: red;
+    width: 100%;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+}

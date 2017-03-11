@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="/w3.js"></script>
+</head>
+
+ <body background="http://3.bp.blogspot.com/-3UIjuTrbAI8/Uihk5uaH_lI/AAAAAAAAAuk/gcn5XlQ9kyI/s640/Top+10+best+Simple+Awesome+Background+Images+for+Your+Website+or+Blog2.jpg">
+    <!-- Header -->
+    <header class="w3-display-container w3-content" style="max-width:1500px">
+        <div w3-include-html="/header.html"></div>
+      <!-- Navbar (placed at the bottom of the header image) -->
+
+    </ul>
+    <br />
+    <br />
+<div class="w3-container w3-white">
+    <center>
+        <h1 class="w3-text-brown">Sign Up</h1>
+    <form class="w3-container" action="/signup" method="post">
+    <div class="w3-col l4">
+        <p>
+
+        </p>
+    </div>
+    <div class="w3-col l4">
+    <label class="w3-label w3-text-orange "><b>Username:</b></label>
+    <input class="w3-input w3-border" type="text"  name="user" placeholder="Username" required name="Name">
+    </div>
+    <br />
+    <br />
+        <br />
+    <div class="w3-col l4">
+        <p>
+
+        </p>
+    </div>
+    <div class="w3-col l4">
+    <label class="w3-label w3-text-orange" ><b>Password:</b></label>
+    <input class="w3-input w3-border" type="password" name="pswd" placeholder="Password" required name="Name">
+    </div>
+    <br />
+    <br />
+    <br />
+    <div class="w3-col l4">
+        <p>
+
+        </p>
+    </div>
+    <div class="w3-col l4">
+    <label class="w3-label w3-text-orange" ><b>Confirm Password:</b></label>
+    <input class="w3-input w3-border" type="password" name="pswdconf" placeholder="Password" required name="Name">
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <button class="w3-btn w3-brown">Register</button>
+    <br />
+    <br />
+    <br />
+    <a class="w3-text-orange w3-hover-orange" href="/login ">Returning User? Click here to login.</a>
+    <br />
+    <% if(blank.length > 0) { %>
+        <div class="w3-col l4">
+            <p>
+
+            </p>
+        </div>
+        <div class="w3-panel w3-red w3-col l4">
+
+            <strong>Error!</strong> All Fields Are Required.
+        </div>
+    <% } %>
+    <% if(match.length > 0) { %>
+        <div class="w3-col l4">
+            <p>
+
+            </p>
+        </div>
+        <div class="w3-panel w3-red w3-col l4">
+          <strong>Error!</strong> Passwords Don&#39;t Match.
+        </div>
+    <% } %>
+
+    <% if(exists.length > 0) { %>
+        <div class="w3-col l4">
+            <p>
+
+            </p>
+        </div>
+        <div class="w3-panel w3-red w3-col l4">
+          <strong>Error!</strong> Username Already Exists.
+        </div>
+    <% } %>
+    <% if(create.length > 0) { %>
+        <div class="w3-col l4">
+            <p>
+
+            </p>
+        </div>
+        <div class="w3-panel w3-red w3-col l4">
+          <strong>Success!</strong> Account Created.
+        </div>
+    <% } %>
+    </form>
+</div>
+
+
+</body>
+<script>
+w3IncludeHTML();
+</script>
+</html>

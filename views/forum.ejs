@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Forum</title>
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="blueberry.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="jquery.blueberry.js"></script>
+    <script src="w3.js"></script>
+    <script>
+
+    jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+    });
+    </script>
+</head>
+ <body background="http://3.bp.blogspot.com/-3UIjuTrbAI8/Uihk5uaH_lI/AAAAAAAAAuk/gcn5XlQ9kyI/s640/Top+10+best+Simple+Awesome+Background+Images+for+Your+Website+or+Blog2.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Header -->
+    <header class="w3-display-container w3-content" style="max-width:1500px">
+    <div w3-include-html="header.html"></div>
+
+
+
+
+    <div class="w3-row">
+<div class="">
+
+        <div class="w3-col l4 w3-responsive w3-padding-64 ">
+            <div class="w3-light-grey w3-padding-64">
+                <%    if(auth=="no"){ %>
+                    <center>
+                        <h1 class="w3-text-brown">Sign Up or Log In to add posts</h1>
+                        <p>
+                        <a class="w3-text-orange w3-hover-orange" href="/signup">New user? Click here to Sign Up</a>
+                        </p>
+                        <p>
+                        <a class="w3-text-orange w3-hover-orange" href="/login">Have an account? Click here to Log In</a>
+                        </p>
+                                </center>
+                <%    }else{ %>
+                            <div class="w3-center w3-padding-large w3-white">
+                            <h1 class="w3-text-brown">Welcome <%= user %></h1>
+                            <form method="post" action="/forum">
+                            <label class="w3-text-orange">Title: </label>
+                            <input class="w3-input w3-border" name="title" type="text" placeholder="Title" required="">
+                            <label class="w3-text-orange">Video Link: </label>
+                            <input class="w3-input w3-border" name="link" type="text" placeholder="Link" required="">
+                            <label class="w3-text-orange">Description: </label>
+                            <textarea class="w3-input w3-border" name="description" placeholder="Description" required=""></textarea>
+                            <br />
+                            <button class="w3-btn w3-brown">Post</button>
+                            </form>
+                            <form method="get" action="/logout">
+                                <br />
+                                <button class="w3-btn w3-brown">Log Out  </button>
+                            </form>
+
+                            </div>
+
+
+
+                    <% } %>
+            </div>
+
+    </p>
+        </div>
+</div>
+        <div class="w3-col l1">
+    <p>
+        <br />
+    </p>
+        </div>
+        <div class="w3-col l6 w3-responsive w3-padding-64">
+            <h1 class="w3-center w3-text-brown">All DIY Projects</h1>
+            <table class="w3-table-all" id="posts">
+              <thead>
+                <tr class="w3-text-orange">
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>Views</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                    <% for(var i = posts.length-1; i >= 0; i--){%>
+                       <tr class='clickable-row w3-text-orange w3-hover-orange'style="cursor: pointer" data-href="forum/<%=posts[i].url%>">
+                        <td><u><%= posts[i].title %></u></td>
+                        <td><u><%= posts[i].author %></u></td>
+                        <td><u><%= posts[i].views %></u></td>
+                        <td><u><%= posts[i].description.substr(0,50)+" ..." %></u></td>
+                        </tr>
+                    <%}%>
+
+              </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script>
+w3IncludeHTML();
+</script>
+</html>

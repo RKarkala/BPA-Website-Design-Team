@@ -1,0 +1,52 @@
+ <body background="http://3.bp.blogspot.com/-3UIjuTrbAI8/Uihk5uaH_lI/AAAAAAAAAuk/gcn5XlQ9kyI/s640/Top+10+best+Simple+Awesome+Background+Images+for+Your+Website+or+Blog2.jpg">
+     <title>Forum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/w3.css">
+<link rel="stylesheet" href="/blueberry.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="/jquery.blueberry.js"></script>
+<script src="/w3.js"></script>
+<link rel="stylesheet" href="/iframe.css">
+<script>
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+</script>
+<header class="w3-display-container w3-content" style="max-width:1500px">
+<div w3-include-html="/header.html"></div>
+<br />
+<br />
+<h1 class="w3-center w3-text-brown" stlye="padding-top: 5%"><%=post[0].title +" - "+post[0].author%></h1>
+<div class="w3-row " style="">
+    <div class="w3-col l12 ">
+        <div class="container">
+            <center>
+
+        <iframe src="<%= post[0].link %>" frameborder="0" allowfullscreen class="video" align="middle">
+
+        </center>
+        </iframe>
+        </div>
+    </div>
+</div>
+    <center>
+
+<div class="w3-light-grey w3-padding-16">
+
+        <p class="w3-text-orange"><bold>View Count: <%= post[0].views%></bold></p>
+        <p class="w3-text-orange"><%=post[0].description %></p>
+
+
+    </div>
+    </center>
+
+
+
+    <script>
+    w3IncludeHTML();
+    </script>
+
+
+</body>

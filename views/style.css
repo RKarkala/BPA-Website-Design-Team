@@ -1,0 +1,262 @@
+<style type="text/css">
+* {
+ margin: 0;
+ border: 0;
+ padding: 0;
+}
+body {
+ background: #f0f0f0;
+ font: 14px/20px Arial, San-Serif;
+ color: #555;
+ margin: 0;
+ height: 100%;
+}
+h1 {
+ text-align: center;
+ font-size: 180%;
+ line-height: 120%;
+ padding: 5% 0;
+}
+h2 {
+ text-decoration: underline;
+ line-height: 280%;
+ padding-left: 2%;
+}
+h3 {
+ line-height: 110%;
+ padding: 0% 0;
+}
+p {
+ padding: 1%;
+ color: #333333;
+}
+img {
+ text-align: center;
+ max-width: 100%;
+ height: auto;
+ width: auto;
+}
+a {
+ color: #878484;
+ text-decoration: none;
+ font-weight: bold;
+}
+a:hover {
+ color: #333333;
+ text-decoration: underline;
+}
+
+#logo {
+ margin: 0 px;
+ padding: 13px 10px;
+ float: left;
+ width: 200px;
+ height: 60px;
+ background: url(Logo.png) no-repeat center;
+}
+nav {
+ float: right;
+ padding: 12px 20px 20px 0;
+}
+#menu-icon {
+ display: hidden;
+ width: 40px;
+ height: 40px;
+ background: url(https://www.w3newbie.com/wp-content/uploads/icon.png) center;
+}
+a:hover#menu-icon {
+ border-radius: 4px 4px 0 0;
+}
+ul {
+ list-style: none;
+}
+nav ul li {
+ display: inline-block;
+ float: left;
+ padding: 10px;
+}
+. {
+ color: #FFF;
+ text-decoration: underline;
+}
+#doc {
+ margin: 0px;
+}
+#content {
+ margin: 0 auto;
+ max-width: 1140px;
+ margin-top: 110px;
+}
+.blueberry {
+    max-width: 960px;
+    padding-top: 90px;
+}
+section {
+ width: 100%;
+ float: left;
+ margin: 2% 2%;
+ text-align: center;
+ list-style: none;
+}
+
+section.three-col {
+ width: 29%;
+ float: left;
+ margin: 2% 2%;
+ text-align: center;
+ list-style: none;
+ / padding-bottom: /
+}
+section.vids {
+ width: 29%;
+ a {
+ color: #333333;
+ text-decoration: none;
+ font-weight: bold;
+ }
+ a:hover {
+ color: #333333;
+ text-decoration: underline;
+ }
+}
+section.footertext {
+ width: 100%;
+}
+.clear {
+ clear: both;
+}
+article {
+ float: left;
+ margin: 0 auto;
+ width: 50%;
+ height: auto;
+ padding: 4%;
+}
+aside {
+ float: right;
+ margin: 0 auto;
+ width: 35%;
+ height: auto;
+ padding: 3%;
+}
+ul.gym li {
+ padding-left: 3%;
+
+ a {
+  color: #405580;
+  text-decoration: none;
+  font-weight: bold;
+ }
+ a:hover {
+  color: #405580;
+  text-decoration: underline;
+ }
+}
+footer {
+ background: #333333;
+ width: 100%;
+ overflow: hidden;
+ opacity: 0.90;
+ bottom: 0 !important;
+ left: 0;
+ right: 0;
+}
+footer p, footer h3, footer h5, footer h6 {
+ color: #FFF;
+}
+footer p a {
+ color: #FFF;
+ text-decoration: none;
+}
+footer.second h6{
+ border-top: 1px solid #4D4E50;
+ background-color: #333333;
+ max-height: 50px;
+ text-align: center;
+ opacity: 0.95;
+}
+section.vids{
+ a:link{
+  color: #333333;
+ }
+}
+.boxed {
+ width: 40%auto;
+ padding-left: 5%;
+ padding-right: 5%;
+ border: 5px #333333;
+}
+@media screen and (max-width:478px) {
+ body{
+  position: absolute;
+ }
+}
+@media screen and (max-width:870px) {
+ header {
+  position: absolute;
+ }
+ #menu-icon {
+  display: inline-block;
+ }
+ nav ul, nav:active ul {
+  display: none;
+  position: absolute;
+  padding: 20px;
+  background: #405580;
+  border: 1px solid #FFF;
+  right: 20px;
+  top: 60px;
+  width: 20%;
+  border-radius: 2px 0 2px 2px;
+ }
+ nav li {
+  text-align: right;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  display: block !important;
+ }
+ nav:hover ul {
+  display: block;
+ }
+ section {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+ }
+
+ section.three-col {
+  width: 100%;
+ }
+
+ section.vids {
+  width: 100%;
+  height: 412px auto%;
+ }
+
+ article {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+ }
+ aside {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+ }
+ section.footertext{
+ padding-left: 4%;
+ }
+ footer {
+  position: absolute;
+  bottom: 0;
+ }
+ .boxed {
+  width: 100%;
+ }
+
+</style>
